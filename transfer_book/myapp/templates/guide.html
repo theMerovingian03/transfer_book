@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Guide{% endblock %}
+
+{% block content %}
+<div class="container1">
+    <h2>Guidelines for account creation/authentication</h2>
+    <p>Signing up</p>
+    <u1>
+        <li>The username must be unique among all users. By default, it allows alphanumeric characters and the following special characters: @, ., +, -, and _. </li>
+        <li>Password must be minimum 8 characters long.</li>
+        <li>Password must not be very common or similar to your other information.</li>
+        <li>Password must have at least one uppercase letter, one lowercase letter, and one digit.</li>
+    </u1>
+    <p>Logging In</p>
+    <u1>
+        <li>Make sure you have an account before logging in.</li>
+        <li>Enter correct username and password, both fields are case sensitive.</li>
+    </u1>
+    <p>Creating/Updating or Deleting Reecords:</p>
+    <u1>
+        <li>You need to be logged in to store your records.</li>
+        <li>The records that you delete are deleted permanently and with no way to restore them.</li>
+    </u1>
+    <p>If your issue still persists, kindly get in touch with <a href="{% url 'contact' %}">customer care</a></p>
+</div>
+{% endblock %}

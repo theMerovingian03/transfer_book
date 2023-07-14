@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Error{% endblock %}
+
+{% block content %}
+<div class="container1">
+<h2 style="font-weight: 400;">Error :p</h2>
+<p>An error occured while performing the required action</p>
+<p style="color: red;">{{ message }}</p>
+<p>You can try the following to fix this:</p>
+
+<u1>
+    <li><a href="{% url 'signup' %}">Sign up </a>if you don't have an account.</li>
+    <li><a href="{% url 'login' %}">Login again</a> with correct credentials.</li>
+    <li><a href="{% url 'guide' %}">Read guidelines</a> for any registration and authentication issues.</li>
+    <li><a href="{% url 'contact' %}">Get in touch</a> with customer support.</li>
+</u1>
+
+</div>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}Insights{% endblock %}
+
+{% block content %}
+<br>
+<div style="text-align: center;">
+  <h2>Overview: </h2>
+    {% if records_per_month %}
+      <img src="data:image/png;base64,{{ records_per_month_chart }}" alt="Records per Month Chart">
+    {% else %}
+      <p>No records found</p>
+    {% endif %}
+</div>
+
+<div class="container1">
+    <h2 style="text-align: center;">
+        Records Created Today:
+    </h2>
+    {% if records_today %}   
+        <div class="table-container">
+            <table style="width: 35%;">
+                <th>Title</th>
+                <th>Amount</th>
+                {% for record in records_today %}
+                <tr class="clickable-row" data-href="{% url 'record' record.id %}">
+                  <td>{{ record.title }}</td>
+                  <td>{{ record.amount }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+        </div>
+        <p style="text-align: center;">Click on a record to view more.</p>
+    {% else %}
+    <p style="text-align: center;">No records created today.</p>
+    {% endif %}
+    <br>
+    <h2 style="text-align: center;">
+        Records Created Each Month:
+    </h2>
+    {% if records_per_month %}
+    <div class="table-container">
+        <table style="width: 35%;">
+            <th>Month</th>
+            <th>Count</th>
+            {% for record in records_per_month %}
+            <tr class="clickable-row" data-href="{% url 'records' %}">
+              <td>{{ record.month|date:"F Y" }}</td>
+              <td>{{ record.record_count }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+    </div>
+    {% else %}
+    <p style="text-align: center;">No records found</p>
+    {% endif %}
+    
+    <br>
+    <h2 style="text-align: center;">
+        Highest Record Amount:
+    </h2>
+    {% if record_with_highest_amount %}
+    <div class="table-container">
+        <table style="width: 35%;">
+            <th>Title</th>
+            <th>Amount</th>
+            <tr class="clickable-row" data-href="{% url 'record' record_with_highest_amount.id %}">
+              <td>{{ record_with_highest_amount.title }}</td>
+              <td>{{ record_with_highest_amount.amount }}</td>
+            </tr>
+          </table>
+    </div>
+    <p style="text-align: center;">Click on the record to view more.</p>
+    {% else %}
+    <p style="text-align: center;">No records found.</p>
+    {% endif %}
+    
+</div>
+<p style="margin-top: -5px; text-decoration: underline;"><a onclick="window.history.back();">Go Back</a></p>
+<br>
+<br>
+
+{% endblock %}

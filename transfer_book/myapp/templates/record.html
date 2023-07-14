@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}Record Detail{% endblock %}
+
+{% block content %}
+<!-- <div class="container1">
+    <h2>Details for record: <span style="color: var(--primary-color);">{{ record.title }}</span></h2>
+    <p>Records are stored securely.</p>
+    <u1>
+        <li>Title: <span style="color: var(--primary-color);">{{ record.title }}</span></li>
+        <li>Amount payed: <span style="color: var(--primary-color);">{{ record.amount }}</span></li>
+        <li>Added date: <span style="color: var(--primary-color);">{{ record.date_added }}</span></li>
+        <li>Payment date: <span style="color: var(--primary-color);">{{ record.date_payed }}</span></li>
+    </u1>
+    
+    <p style="margin-top: 20px;"><a href="{% url 'record-update' record.id %}" >Edit</a> this record</p>
+    <p style="margin-top: -10px;"><a href="{% url 'record-delete' record.id%}">Delete</a> this record</p>
+    <p style="margin-top: -10px;"><a href="/records/">Go Back</a></p>
+</div> -->
+<h2 style="text-align: center; margin-top: 25px;">Details for record: <span style="color: var(--primary-color);">{{ record.title }}</span></h2>
+
+<div class="table-container">
+    <table>
+        <th>Parameter</th>
+        <th>Detail</th>
+        <tr>
+          <td>Title</td>
+          <td><span style="color: var(--primary-color);">{{ record.title }}</span></td>
+        </tr>
+        <tr>
+          <td>Amount payed</td>
+          <td><span style="color: var(--primary-color);">{{ record.amount }}</span></td>
+        </tr>
+        <tr>
+          <td>Added date</td>
+          <td><span style="color: var(--primary-color);">{{ record.date_added }}</span></td>
+        </tr>
+        <tr>
+            <td>Payement Date</td>
+            <td><span style="color: var(--primary-color);">{{ record.date_payed }}</span></td>
+        </tr>
+      </table>
+</div>
+<br>
+<div class="parallel-button-container">
+    <button onclick="window.location.href='{% url 'record-update' record.id %}';">
+      Edit Record
+    </button>
+    <br>
+    <button onclick="window.location.href='{% url 'record-delete' record.id %}';">
+      Delete Record
+    </button>
+  </div>
+  <p style="margin-top: -5px; text-decoration: underline;"><a onclick="window.history.back();">Go Back</a></p>
+{% endblock %}

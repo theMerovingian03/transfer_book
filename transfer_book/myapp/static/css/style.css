@@ -1,0 +1,657 @@
+/* 
+006080 primary
+004d66 secondary
+
+primary: 8665f7
+secondary: 684bc6
+
+007399
+*/
+:root {
+    --primary-color: #455d7a;
+    --secondary-color: #354b66;
+    --my-background-color: #ffffff;
+  }
+  
+  body {
+    background-color: var(--my-background-color);
+    font-family: "Ubuntu", "Lucida sans";
+    margin: 0;
+
+  }
+  
+  a:hover{
+    color: #127292;
+  }
+  
+  .signup-box {
+    width: 360px;
+    height: 400px;
+    margin: auto;
+    background-color: var(--my-background-color);
+    border-radius: 3px;
+  }
+  
+  .signup-box a {
+    color: var(--primary-color);
+  }
+  
+  .login-box {
+    width: 360px;
+    height: 280px;
+    margin: auto;
+    background-color: var(--my-background-color);
+    border-radius: 3px;
+  }
+
+  /* form input[type="submit"].login-button{
+    width: 100%;
+    padding-top: 2;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Ubuntu';
+    background-color: var(--primary-color); 
+    border: none; 
+    color: white; 
+    font-family: 'Ubuntu';
+    padding: 10px 25px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: block; 
+    font-size: 15px; 
+    margin: 0 auto; 
+    cursor: pointer; 
+    border-radius: 4px; 
+  }
+
+  form input[type="submit"].login-button:hover{
+    background-color: var(--secondary-color);
+  } */
+  
+  .record-box{
+    width: 360px;
+    height: 360px;
+    margin: auto;
+    background-color: var(--my-background-color);
+    border-radius: 3px;
+  }
+  
+  h1 {
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  h4 {
+    text-align: center;
+  }
+  
+  form {
+    width: 300px;
+    margin-left: 20px;
+  }
+  
+  form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  
+  form textarea {
+    width: 310px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Ubuntu';
+  }
+  
+  input[type="button"] {
+    width: 315px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    line-height: 35px;
+  }
+  
+  input[type="button"]:hover {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+
+  input[type="submit"] {
+    width: 315px;
+    height: 35px;
+    margin-top: 20px;
+    border: 2px solid var(--primary-color);
+    background-color: white;
+    border-radius: 4px;
+    color: var(--primary-color);
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  input::placeholder {
+    color: gray;
+    font-family: 'Ubuntu';
+    font-style: thin;
+  }
+  
+  textarea::placeholder{
+    color: gray;
+    font-family: 'Ubuntu';
+    font-style: thin; 
+    border-radius: 5px;
+  }
+  
+  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+  
+  .signup-box a:hover {
+    color: #012d3c;
+  }
+  
+  .para-2 {
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    margin-top: -50px;
+  }
+  
+  .para-2 a:hover {
+    color: #012d3c;
+  }
+  
+  .para-2 a {
+    color: var(--primary-color);
+  }
+  
+  table {
+    margin: auto;
+  }
+  
+  table {
+    align-content: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 720px;
+    padding-top: 100px;
+    font-family: "Ubuntu";
+  }
+  
+  th,
+  td {
+    text-align: center;
+    padding: 8px;
+    text-align: left;
+    font-size: 15px;
+    color: black;
+    border-bottom: 1px solid #ddd;
+  }
+
+  td{
+    text-align: center;
+  }
+
+  td a{
+    align-items: center;
+    text-align: center;
+  }
+  
+  th {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  th:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  tr:hover {
+    background-color: #dedede;
+  }
+  
+  nav {
+    background-color: var(--primary-color);
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    float: right;
+  }
+  
+  nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    /*comment*/
+  }
+  
+  nav li a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  nav .logo img {
+    padding-left: 10px;
+    height: 40px;
+    width: auto;
+    margin: 5px;
+  }
+  
+  
+  button{
+    background-color: white; /* Green background */
+    border: 2px solid var(--primary-color); /* Remove border */
+    color: var(--primary-color); /* White text */
+    font-family: 'Ubuntu';
+    padding: 10px 25px; /* Add some padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make it a block element */
+    font-size: 15px; /* Set font size */
+    margin: 0 auto; /* Add margin */
+    cursor: pointer; /* Add cursor on hover */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  button:hover{
+  background-color: var(--primary-color);
+  color: white;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .square-button {
+    width: 150px;
+    height: 100px;
+    margin: 25px;
+    background-color: var(--my-background-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--primary-color); /* add a solid border with a width of 2px */
+  }
+  
+  .square-button:hover{
+    background-color: var(--primary-color);
+    color: white;
+    
+  }
+  
+  h2{
+    font-weight: 560;
+  }
+  
+  h1{
+    font-weight: 560;
+  }
+  
+  h4{
+    font-weight: 560;
+  }
+
+  .symbol {
+    font-size: 20px; /* Increase the font size as desired */
+    text-decoration: none;
+  }
+  
+  .login-button{
+    background-color: var(--primary-color); /* Green background */
+    border: none; /* Remove border */
+    color: white; /* White text */
+    font-family: 'Ubuntu';
+    padding: 10px 25px; /* Add some padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make it a block element */
+    font-size: 15px; /* Set font size */
+    margin: 0 auto; /* Add margin */
+    cursor: pointer; /* Add cursor on hover */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .login-button:hover{
+  background-color: var(--secondary-color);
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+/* User creation form */
+
+/* Form container */
+.user-creation-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+/* Form fields */
+.user-creation-form input[type="text"],
+.user-creation-form input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+/* Form labels */
+.user-creation-form label {
+  display: block;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+/* Submit button */
+.user-creation-form button[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.user-creation-form button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
+.parallel-button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallel-button-container button{
+  margin: 5px;
+}
+
+/* styles.css */
+
+.messages {
+  list-style: none;
+  margin: 0;
+}
+
+.messages li {
+  position: relative;
+  margin-bottom: 0px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.messages li.error {
+  background-color: #ffcccc;
+  color: #ff0000;
+}
+
+.messages li.success {
+  background-color: #ccffcc;
+  color: #008000;
+}
+
+.messages li.info {
+  background-color: #e6f2ff;
+  color: #0056b3;
+}
+
+.dismiss-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transform: translateY(-32%);
+  background: none;
+  border: none;
+  font-size: 35px;
+  color: #999;
+  cursor: pointer;
+}
+
+.dismiss-button:hover {
+background: none;
+border: #999;
+}
+
+.container1 {
+  padding-top: 5px;
+  padding-left: 50px;
+  align-items: normal;
+  display: flexbox;
+  justify-content: left;
+}
+
+.container1 u1{
+  color: rgb(0, 0, 0);
+}
+
+.container1 p{
+  padding-top: 2px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  justify-content: left;
+}
+
+.container1 span{
+  color: var(--primary-color);
+}
+
+.container3{
+  text-align: left;
+}
+
+.container2{
+  padding-top: 5px;
+  padding-left: 20px;
+  align-items: normal;
+  display: flexbox;
+  justify-content: center;
+}
+
+.container2 p{
+  margin: 0;
+  padding-top: 2px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  justify-content: center;
+}
+
+.container2 h2{
+  margin: 0;
+  padding-top: 2px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  justify-content: center;
+}
+
+.button2{
+  background-color: var(--primary-color); /* Green background */
+  border: none; /* Remove border */
+  color: white; /* White text */
+  font-family: 'Ubuntu';
+  padding: 10px 25px; /* Add some padding */
+  text-align: left; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make it a block element */
+  font-size: 15px; /* Set font size */
+  margin: 0 auto; /* Add margin */
+  cursor: pointer; /* Add cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.button2:hover{
+background-color: var(--secondary-color);
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.search-input {
+  width: 315px;
+  height: 20px;
+  margin-top: 20px;
+  margin-right: 5px;
+  margin-bottom: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-dropdown {
+  width: 315px;
+  height: 20px;
+  margin-top: 20px;
+  margin-right: 5px;
+  margin-bottom: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-button {
+  background-color: white; /* Green background */
+  border: var(--primary-color); /* Remove border */
+  color: var(--primary-color); /* White text */
+  font-family: 'Ubuntu';
+  padding: 10px 25px; /* Add some padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make it a block element */
+  font-size: 15px; /* Set font size */
+  margin: 0 auto; /* Add margin */
+  cursor: pointer; /* Add cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+  line-height: 35px;
+}
+
+.search-button:hover{
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Adjust the height as needed */
+}
+
+.custom-dropdown {
+  width: 300px;
+  height: 20px;
+  background-color: white;
+  padding-bottom: 5px;
+  margin-bottom: 5px; 
+  /* Add more styles as needed */
+}
+
+.sort-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Ubuntu';
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+}
+
+.select-container select {
+  width: 199px;
+  height: 35px;
+  font-family: 'Ubuntu';
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.select-container select option {
+  background-color: white;
+  color: black;
+  /* Add additional styles as needed */
+}
+
+.select-container select option:hover {
+  background-color: var(--primary-color);
+  color: white 
+}
+
+.select-container button {
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-family: 'Ubuntu';
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+.select-container input[type='submit']{
+  margin-top: -1px;
+  margin-left: -5px;
+  width: 104px;
+  height: 35px;
+  font-size: medium;
+}
+
+.chart-container{
+  width: 250px;
+  /* margin: 0 0 0 50%; */
+  /* transform: translateX(-50%); */
+  padding: 50px;
+  background-color: var(--my-background-color);
+  border: 1px solid var(--primary-color);
+}
+
+.image-1 {
+  height: 250px;
+  width: 250px;
+  max-width: 20%; /* Adjust the value to make the image smaller */
+  /* margin: 0 auto; */
+  padding: 2px;
+  background-color: var(--my-background-color);
+  border: 1px solid var(--primary-color);
+}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<div class="signup-box">
+    <h2 style="text-align: center;">Sign Up</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label>{{form.username.label}}</label>
+        {{form.username}}
+
+        <label>{{form.password1.label}}</label>
+        {{form.password1}}
+
+        <label>{{form.password2.label}}</label>
+        {{form.password2}}
+        <input class="button" type="submit" value="Register">
+    </form>
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    <p style="margin-top: -15px;"><a href="{% url 'guide' %}">Guidelines</a> for registering</p>
+</div>
+{% endblock %}

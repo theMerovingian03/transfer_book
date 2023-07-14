@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Update Record{% endblock %}
+
+{% block content %}
+<div class="record-box">
+    <h1>Update record: <span style="color: var(--primary-color);">{{ object.id }}</span></h1>
+    <form method="post" action="">
+      {% csrf_token %}
+      <label>For</label>
+      <input type="text" name="title" placeholder="Who did you pay?" id="id_title" required value="{{ object.title }}">
+      <label>Amount</label>
+      <input type="number" name="amount" placeholder="How much did you pay? (in INR)" id="id_amount" required value="{{ object.amount }}">
+      <label>Date (Leave blank for current date)</label>
+      <input type="date" name="date_payed" placeholder="" id="id_date_payed" value="{{ object.date_payed|date:'Y-m-d' }}">
+      <input class="button" type="submit" value="Submit">
+    </form>
+    <p>Your records are securely stored! View them <a href="/records/">here.</a></p>
+  </div> 
+  <p style="text-align: center;"><a onclick="window.history.back();">Go Back</a></p>
+{% endblock %}

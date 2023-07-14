@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Confirm Delete{% endblock %}
+
+{% block content %}
+<div class="container1">
+<h2>Delete record: <span style="color: var(--primary-color);">{{ record.title }}</span></h2>
+<p>Note that this action is irreversible</p>
+<u1>
+    <li>Title: <span style="color: var(--primary-color);">{{ record.title }}</span></li>
+    <li>Amount payed: <span style="color: var(--primary-color);">{{ record.amount }}</span></li>
+    <li>Added date: <span style="color: var(--primary-color);">{{ record.date_added }}</span></li>
+    <li>Payment date: <span style="color: var(--primary-color);">{{ record.date_payed }}</span></li>
+</u1>
+
+<p><a onclick="window.history.back();">Go Back</a></p>
+</div>
+<div>
+  <form method="post">
+    {% csrf_token %}
+    <input class="button" type="submit" value="Delete">
+  </form>
+  <br>  
+</div>
+{% endblock %}

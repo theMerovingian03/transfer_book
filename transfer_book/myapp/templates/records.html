@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}My Records{% endblock %}
+
+{% block content %}
+<br>
+<div class="container2">
+<h2 style="text-align: center;"><span style="color: var(--primary-color)">{{request.user|capfirst}}'s</span> Records</h2>
+</div>
+
+<div class="search-box">
+  <form method="GET" style="display: flex;">
+      <input class="search-input" type='text' name='search-area' placeholder="Search your record" value="{{search_input}}">
+      <input style="font-size: medium;" class="button" type="submit" value='Search'>
+  </form>
+</div>
+
+<div class="sort-container">
+  <form method="get">
+    <div class="select-container">
+      <select name="sort-by">
+        <option value="">Sort By</option>
+        <option value="date_payed" {% if sort_by == 'date_payed' %}selected{% endif %}>Date Payed</option>
+        <option value="title" {% if sort_by == 'title' %}selected{% endif %}>Title</option>
+        <option value="amount_asc" {% if sort_by == 'amount_asc' %}selected{% endif %}>Amount (Ascending)</option>
+        <option value="amount_desc" {% if sort_by == 'amount_desc' %}selected{% endif %}>Amount (Descending)</option>
+      </select>
+    <input class="button" type="submit" value='Apply'>
+    </div>
+  </form>
+</div>
+<br>
+
+
+
+
+{% if records %}
+<table>
+  <tr>
+      <th>To</th>
+      <th>Amount</th>
+      <!-- <th>Created Date</th> -->
+      <th>Payment Date</th>
+  </tr>
+  {% for record in records %}
+  <tr class="clickable-row" data-href="{% url 'record' record.id %}">
+      <td>{{ record.title }}</td>
+      <td>{{ record.amount }}</td>
+      <!-- <td>{{ record.date_added }}</td> -->
+      {% if record.date_payed %}
+      <td>{{ record.date_payed }}</td>
+      {% else %}
+      <td>--</td>
+      {% endif %}
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+<p style="text-align: center;">No records found</p>
+{% endif %}
+<br>
+<div class="parallel-button-container">
+  <button onclick="window.location.href='/record-create/';">
+    Add a record
+  </button>
+  <br>
+  <button onclick="window.location.href='/insights/';">
+    View Insights
+  </button>
+</div>
+<br>
+<p style="margin-top: -5px;">Click on a record to know more, edit or delete.</p>
+<br>
+
+
+{% endblock %}

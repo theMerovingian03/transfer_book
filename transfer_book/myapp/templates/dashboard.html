@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2 style="text-align: center; padding-top: 30px;">Welcome, <span style="color: var(--primary-color);">{{request.user|capfirst}},</span> to your TransferBook!</h2>
+
+<div class="button-container">
+    <button class="square-button" onclick="window.location.href='/record-create/';">Add a new record</button>
+    <button class="square-button" onclick="window.location.href='/records/';">View your records</button>
+    <button class="square-button" onclick="window.location.href='/insights/';">View your insights</button>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<h2 style="text-align: center; padding-top: 20px;">Get in touch (not functional for now)</h2>
+
+<div class="login-box">
+    <form>
+        <label>Name</label>
+        <input type="text" placeholder="Your name" id="name" required>
+        <label>Email</label>
+        <input type="email" placeholder="Your e-mail id" id="email" required>
+        <label>Query</label>
+        <textarea id="message" name="message" rows="3" placeholder="Type your message or question" required></textarea>
+        <input type="submit" value="Submit" class="button">
+    </form>
+<p>Our team will get back soon...</p>
+</div>
+
+<br>
+<br>
+
+
+<h2 style="margin-left: 20px;">Contact Developer: </h2>
+<ul>
+    <li>Name: Rushikesh Borade</li>
+    <li>Email: <a href="mailto:rishipb21@gmail.com"></a>rishipb21@gmail.com</li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/rushikesh-borade-94b092234">Visit Profile</a></li>
+    <li>git hub: <a href="https://github.com/theMerovingian03">Visit Profile</a></li>
+</ul>
+<br>
+
+{% endblock %}

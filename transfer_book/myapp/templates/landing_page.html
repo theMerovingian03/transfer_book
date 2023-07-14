@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Landing Page{% endblock %}
+
+{% block content %}
+<h2 style="text-align: center; padding-top: 30px;">Welcome to TransferBook!</h2>
+<p style="text-align: center; margin-top: -15px;">What is TransferBook?</p>
+<p style="text-align: center; margin-top: -15px;">A new, simple and safe way to keep track of your payments.</p>
+{% if user.is_authenticated %}
+
+<div class="button-container">
+    <button class="square-button" onclick="window.location.href='{% url 'dashboard' %}';">View Dashboard</button>
+    <button class="square-button" onclick="window.location.href='{% url 'insights' %}';">View Your Insights</button>
+</div>
+{% else %}
+
+<div class="button-container">
+    <button class="square-button" onclick="window.location.href='{% url 'login' %}';">Login</button>
+    <button class="square-button" onclick="window.location.href='{% url 'signup' %}';">Sign Up</button>
+</div>
+{% endif %}
+
+{% endblock %}

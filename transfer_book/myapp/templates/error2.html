@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Error{% endblock %}
+
+{% block content %}
+<div class="container1">
+    <h2 style="font-weight: 400;">Error :p</h2>
+    <p>An error occured while performing the required action</p>
+    <p style="color: red;">{{error_code}}: {{ error_message }}</p>
+    <p>You can try the following to fix this:</p>
+
+    <u1>
+        <li>Reload the website.<a href="/">Reload</a></li>
+        <li>Check you internet connection</li>
+        <li>Try again after sometime</li>
+        <li>Try on a different browseror device</li>
+        <li>Use incognito mode</li>
+        <li>Clear cache and cookies</li>
+        <li>Contact <a href="/contact/">customer support</a></li>
+        <li>Retry the action</li>
+    </u1>
+</div>
+{% endblock %}

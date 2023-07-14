@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My title{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #f2f2f2;
+            margin-top: -15px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    {% block nav %}
+    <nav>
+        <ul>
+            <a href="/" class="logo"><img src="{% static 'images/logo.png' %}" alt="Logo"></a>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Log Out</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="{% url 'dashboard' %}">Home</a></li>
+            {% else %}
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/">Account</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endblock %}
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p style="margin-top: -5px;">&copy; 2023 TransferBook. All rights reserved.</p>
+        <p style="margin-top: -20px;">Designed by Rishi Borade</p>
+    </footer>
+</body>
+</html>
