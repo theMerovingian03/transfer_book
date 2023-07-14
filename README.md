@@ -6,7 +6,7 @@ Transfer book is a Django web application to enable users to store and manage th
 1. Make sure you are in the `/transfer_book` directory.
 2. Create a virtual environment if you require.
 3. Install `django` and `matplotlib` libraries using the `pip install django` and `pip install matplotlib` commands.
-4. Once installed, run the `python manage.py runserver command`.
+4. Once installed, run the `python manage.py runserver` command.
 5. Enjoy!
 
 ### Using the web application:
